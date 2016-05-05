@@ -11,7 +11,13 @@ default: &default
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: <%= ENV['DEV_PG_DATABASE'] %>
+  pool: 5
+  username: <%= ENV['DEV_PG_USER'] %>
+  password: <%= ENV['DEV_PG_PASS'] %>
+  host: <%= ENV['DEV_PG_HOST'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
