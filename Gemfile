@@ -38,6 +38,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'pry-rails'
 end
 
 group :development do
@@ -60,3 +61,4 @@ gem 'refinerycms-authentication-devise', '~> 1.0'
 #  gem 'refinerycms-inquiries', ['~> 3.0', '>= 3.0.0']
 #  gem 'refinerycms-search', ['~> 3.0', '>= 3.0.0']
 #  gem 'refinerycms-page-images', ['~> 3.0', '>= 3.0.0']
+
