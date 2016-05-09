@@ -1,0 +1,13 @@
+<div id="side_body">
+  <p>新着記事一覧</p>
+  <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
+</div>
+
+<div id="body">
+<% Refinery::Page.all.order("created_at DESC").each do |pagepart| %>
+  <p>タイトル:<%= raw pagepart.slug %></p>
+  <p>内容<%= raw pagepart.parts[0].body  %></p>
+  <p>作成日<%= raw pagepart.created_at %></p>
+  <br />
+<% end %>
+</div>
